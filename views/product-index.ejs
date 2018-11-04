@@ -1,0 +1,13 @@
+<html lang="en">
+<head>
+  <% include partials/head %>
+  <link href="/css/products.css" rel='stylesheet'>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+  <%- include('partials/navbar', { path: path} ); %>
+  <div class='container'>
+      <%- include('partials/forms/product-search'); %>
+  </div>
+</body>
+</html>

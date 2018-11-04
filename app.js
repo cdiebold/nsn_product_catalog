@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
 const contactRoutes = require('./routes/contact');
 const homeRoute = require('./routes/index');
 const productRoutes = require('./routes/products');
@@ -10,6 +9,10 @@ const quoteRoutes = require('./routes/quote');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(homeRoute);
 app.use(contactRoutes);

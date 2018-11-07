@@ -1,4 +1,4 @@
-module.exports = class Product {
+module.exports = class Comment {
   constructor(subject, message) {
     this.subject = subject;
     this.message = message;
